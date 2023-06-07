@@ -4,7 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import InicioFragment
+import com.example.musicalg.fragments.InicioFragment
 import com.example.musicalg.fragments.RegistroFragment
 import com.example.musicalg.fragments.CancionesFragment
 import com.example.musicalg.fragments.ContactoFragment
