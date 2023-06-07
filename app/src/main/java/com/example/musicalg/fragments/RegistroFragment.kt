@@ -8,10 +8,11 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AlertDialog
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.musicalg.R
 
-class RegistroFragment : Fragment() {
+class RegistroFragment : NavHostFragment() {
 
     private lateinit var editTextName: EditText
     private lateinit var buttonSubmit: Button
@@ -52,10 +53,7 @@ class RegistroFragment : Fragment() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setMessage(welcomeMessage)
             .setPositiveButton("Aceptar") { _, _ ->
-                // Obtener el NavController
-                val navController = findNavController()
-
-                // Navegar al fragmento oculto de bienvenida
+                // Navigate to the BienvenidaFragment
                 navController.navigate(R.id.bienvenidaFragment)
             }
             .create()
